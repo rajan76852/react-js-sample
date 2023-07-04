@@ -17,7 +17,8 @@
     "web-vitals": "^2.1.4",
     "@faker-js/faker": "7.5.0",
     "@reduxjs/toolkit": "1.8.5",
-    "bulma": "0.9.4"
+    "bulma": "0.9.4",
+     "react-redux": "8.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
