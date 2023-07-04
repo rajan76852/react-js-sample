@@ -6,6 +6,7 @@ import ButtonPage from './pages/ButtonPage';
 import ModalPage from './pages/ModalPage';
 import TablePage from './pages/TablePage';
 import CounterPage from './pages/CounterPage';
+import ReduxToolKit from './pages/ReduxToolKit';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/counter">
           <CounterPage initialCount={10} />
+        </Route>
+        <Route path="/redux">
+          <ReduxToolKit />
         </Route>
       </div>
     </div>
