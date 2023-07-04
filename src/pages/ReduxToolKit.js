@@ -9,7 +9,7 @@ export default function ReduxToolKit() {
 
   return (
     <div className="container is-fluid">
-      <button onClick={() => handleResetClick()} className="button is-danger">
+      <button onClick={() => handleResetClick()} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Reset Both Playlists
       </button>
       <hr />
