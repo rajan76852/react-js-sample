@@ -1,6 +1,6 @@
-import "./styles.css";
-import MoviePlaylist from "./components/MoviePlaylist";
-import SongPlaylist from "./components/SongPlaylist";
+import "../styles.css";
+import MoviePlaylist from "../components/MoviePlaylist";
+import SongPlaylist from "../components/SongPlaylist";
 
 export default function ReduxToolKit() {
   const handleResetClick = () => {
