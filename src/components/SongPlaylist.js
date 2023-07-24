@@ -1,6 +1,6 @@
 import { createRandomSong } from "../data";
 import { useSelector, useDispatch } from "react-redux";
-import { addSong } from "../store";
+import { addSong, removeSong } from "../store";
 function SongPlaylist() {
   // To Do:
   const dispatch = useDispatch();
@@ -15,6 +15,7 @@ function SongPlaylist() {
   const handleSongRemove = (song) => {
     // To Do:
     // Remove song from list of songs
+    dispatch(removeSong(song));
   };
 
   const renderedSongs = songPlaylist.map((song) => {
