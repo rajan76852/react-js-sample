@@ -1,12 +1,13 @@
-import Sidebar from './components/Sidebar';
-import Route from './components/Route';
-import AccordionPage from './pages/AccordionPage';
-import DropdownPage from './pages/DropdownPage';
-import ButtonPage from './pages/ButtonPage';
-import ModalPage from './pages/ModalPage';
-import TablePage from './pages/TablePage';
-import CounterPage from './pages/CounterPage';
-import ReduxToolKit from './pages/ReduxToolKit';
+import Sidebar from "./components/Sidebar";
+import Route from "./components/Route";
+import AccordionPage from "./pages/AccordionPage";
+import DropdownPage from "./pages/DropdownPage";
+import ButtonPage from "./pages/ButtonPage";
+import ModalPage from "./pages/ModalPage";
+import TablePage from "./pages/TablePage";
+import CounterPage from "./pages/CounterPage";
+import ReduxToolKit from "./pages/ReduxToolKit";
+import CarPage from "./pages/CarPage";
 function App() {
   return (
     <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/redux">
           <ReduxToolKit />
+        </Route>
+        <Route path="/cars">
+          <CarPage />
         </Route>
       </div>
     </div>
