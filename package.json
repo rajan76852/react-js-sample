@@ -18,10 +18,12 @@
     "@faker-js/faker": "7.5.0",
     "@reduxjs/toolkit": "1.8.5",
     "bulma": "0.9.4",
-     "react-redux": "8.0.4"
+    "react-redux": "8.0.4",
+    "json-server": "^0.17.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:server": "json-server --watch db.json --port 3005",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
