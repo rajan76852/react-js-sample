@@ -1,5 +1,20 @@
 {
-  "users": [{ "id": 1, "name": "test" }],
-  "albums": [],
+  "users": [
+    {
+      "name": "Shelley Dickens",
+      "id": 2
+    },
+    {
+      "name": "Angelo Little",
+      "id": 3
+    }
+  ],
+  "albums": [
+    {
+      "userId": 3,
+      "title": "Luxurious Steel Bike",
+      "id": 1
+    }
+  ],
   "photos": []
 }
