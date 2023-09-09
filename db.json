@@ -9,6 +9,12 @@
       "id": 3
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "userId": 3,
+      "title": "Luxurious Steel Bike",
+      "id": 1
+    }
+  ],
   "photos": []
 }

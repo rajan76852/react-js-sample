@@ -37,7 +37,7 @@ const albumsApi = createApi({
         },
         query: (user) => {
           return {
-            url: '/albums',
+            url: 'https://cc5pnn-3005.csb.app/albums',
             method: 'POST',
             body: {
               userId: user.id,
