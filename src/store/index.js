@@ -9,12 +9,14 @@ import {
   changeSearchTerm,
 } from "./slices/carsSlice";
 import { formReducer, changeName, changeCost } from "./slices/carFormSlice";
+import { userReducer } from "./slices/userSlice";
 const store = configureStore({
   reducer: {
     songs: songsReducers,
     movies: moviesReducers,
     cars: carsReducer,
     form: formReducer,
+    users: userReducer,
   },
 });
 
@@ -31,3 +33,4 @@ export {
   removeCar,
   changeSearchTerm,
 };
+export * from "./thunks/fetchUsers";
