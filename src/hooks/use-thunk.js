@@ -16,6 +16,5 @@ export function useThunk(thunk) {
     },
     [dispatch, thunk]
   );
-
   return [runThunk, isLoading, error];
 }
