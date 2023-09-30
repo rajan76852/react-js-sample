@@ -1,4 +1,4 @@
-import { GoTrashcan } from 'react-icons/go';
+import {GoTrash as GoTrashcan } from 'react-icons/go';
 import { useRemoveAlbumMutation } from '../store';
 import Button from './Button';
 import ExpandablePanel from './ExpandablePanel';

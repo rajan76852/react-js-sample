@@ -1,12 +1,15 @@
-import { GoArrowSmallDown, GoArrowSmallUp } from 'react-icons/go';
-import Table from './Table';
-import useSort from '../hooks/use-sort';
+import {
+  GoArrowDown as GoArrowSmallDown,
+  GoArrowUp as GoArrowSmallUp,
+} from "react-icons/go";
+import Table from "./Table";
+import useSort from "../hooks/use-sort";
 
 function SortableTable(props) {
   const { config, data } = props;
   const { sortOrder, sortBy, sortedData, setSortColumn } = useSort(
     data,
-    config
+    config,
   );
 
   const updatedConfig = config.map((column) => {
@@ -50,13 +53,13 @@ function getIcons(label, sortBy, sortOrder) {
         <GoArrowSmallDown />
       </div>
     );
-  } else if (sortOrder === 'asc') {
+  } else if (sortOrder === "asc") {
     return (
       <div>
         <GoArrowSmallUp />
       </div>
     );
-  } else if (sortOrder === 'desc') {
+  } else if (sortOrder === "desc") {
     return (
       <div>
         <GoArrowSmallDown />

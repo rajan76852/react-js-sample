@@ -1,4 +1,4 @@
-import { GoTrashcan } from 'react-icons/go';
+import {GoTrash as GoTrashcan } from 'react-icons/go';
 import { useRemovePhotoMutation } from '../store';
 
 function PhotosListItem({ photo }) {
