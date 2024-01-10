@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { setupListeners } from '@reduxjs/toolkit/query';
+import { configureStore } from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query";
 import { songsReducers, addSong, removeSong } from "./slices/songsSlice";
 import { moviesReducers, addMovie, removeMovie } from "./slices/movieSlice";
 import { reset } from "./actions";
@@ -11,23 +11,25 @@ import {
 } from "./slices/carsSlice";
 import { formReducer, changeName, changeCost } from "./slices/carFormSlice";
 import { userReducer } from "./slices/userSlice";
-import { albumsApi } from './apis/albumsApi';
-import { photosApi } from './apis/photosApi';
+import { albumsApi } from "./apis/albumsApi";
+import { photosApi } from "./apis/photosApi";
+import { utilsReducer, updateState } from "./slices/utilsSlice";
 const store = configureStore({
   reducer: {
     songs: songsReducers,
     movies: moviesReducers,
     cars: carsReducer,
     form: formReducer,
-    users: userReducer,   
-      [albumsApi.reducerPath]: albumsApi.reducer,
-      [photosApi.reducerPath]: photosApi.reducer
+    users: userReducer,
+    [albumsApi.reducerPath]: albumsApi.reducer,
+    [photosApi.reducerPath]: photosApi.reducer,
+    utils: utilsReducer,
   },
-    middleware: (getDefaultMiddleware) => {
-      return getDefaultMiddleware()
-        .concat(albumsApi.middleware)
-        .concat(photosApi.middleware);
-    },
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware()
+      .concat(albumsApi.middleware)
+      .concat(photosApi.middleware);
+  },
 });
 
 export {
@@ -42,6 +44,7 @@ export {
   addCar,
   removeCar,
   changeSearchTerm,
+  updateState,
 };
 export * from "./thunks/fetchUsers";
 export * from "./thunks/addUser";
@@ -51,9 +54,9 @@ export {
   useFetchAlbumsQuery,
   useAddAlbumMutation,
   useRemoveAlbumMutation,
-} from './apis/albumsApi';
+} from "./apis/albumsApi";
 export {
   useFetchPhotosQuery,
   useAddPhotoMutation,
   useRemovePhotoMutation,
-} from './apis/photosApi';
+} from "./apis/photosApi";
